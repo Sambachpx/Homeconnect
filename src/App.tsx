@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import logo from './logoHomeConnect.png';
 
 function Header() {
   return (
     <div className="flex flex-row">
-     <img src={logo} className="w-20 h-30" alt="logo HomeConnect" />
+    <img src="../src/images/logoHomeConnect.png" className="w-20 h-30" alt="logo HomeConnect" />
     </div>
   );
 }
@@ -17,7 +16,7 @@ function Navigation() {
   return (
     <div className="flex flex-row">
       <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href='/App.tsx' onClick={handleClick} role="button"> Accueil</a>
-      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href='/ampoules' onClick={handleClick} role="button"> Ampoules connectées</a>
+      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href='/AmpoulesConnectees.tsx' onClick={handleClick} role="button"> Ampoules connectées</a>
       <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href='/prises' onClick={handleClick} role="button"> Prises connectées</a>
       <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href='/serrures' onClick={handleClick} role="button"> Serrures connectées</a>
       <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href='/cameras' onClick={handleClick} role="button"> Caméras connectées</a>
