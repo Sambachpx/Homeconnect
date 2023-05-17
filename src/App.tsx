@@ -1,6 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AmpoulesConnectees from './AmpoulesConnectees';
+import PrisesConnectees from './PrisesConnectees';
+import SerruresConnectees from './SerruresConnectees';
+import CamerasConnectees from './CamerasConnectees';
 
 function Header() {
   return (
@@ -11,36 +15,43 @@ function Header() {
 }
 
 function Navigation() {
-  const history = useHistory();
-
-  const handleNavigation = (path: string): void => {
-    history.push(path);
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void => {
+    event.preventDefault();
   };
-
+  
   return (
     <div className="flex flex-row">
-      <button className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" onClick={() => handleNavigation('/')}> Accueil</button>
-      <button className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" onClick={() => handleNavigation('/ampoules')}> Ampoules connectées</button>
-      <button className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" onClick={() => handleNavigation('/prises')}> Prises connectées</button>
-      <button className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" onClick={() => handleNavigation('/serrures')}> Serrures connectées</button>
-      <button className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" onClick={() => handleNavigation('/cameras')}> Caméras connectées</button>
+      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/" onClick={handleClick} role="button"> Accueil</a>
+      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/ampoules" onClick={handleClick} role="button"> Ampoules connectées</a>
+      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/prises" onClick={handleClick} role="button"> Prises connectées</a>
+      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/serrures" onClick={handleClick} role="button"> Serrures connectées</a>
+      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/cameras" onClick={handleClick} role="button"> Caméras connectées</a>
     </div>
   );
 }
 
 function Search() {
   return (
-    <input type='text' placeholder='Rechercher...' name='search' />
+    <input type="text" placeholder="Rechercher..." name="search" />
   );
 }
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Navigation />
-      <Search />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Navigation />
+        <Search />
+        <Routes>
+          <Route path="/ampoules" element={<AmpoulesConnectees />} />
+          <Route path="/prises" element={<PrisesConnectees />} />
+          <Route path="/serrures" element={<SerruresConnectees />} />
+          <Route path="/cameras" element={<CamerasConnectees />} />
+
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
