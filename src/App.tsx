@@ -1,57 +1,35 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import AmpoulesConnectees from './AmpoulesConnectees';
 import PrisesConnectees from './PrisesConnectees';
 import SerruresConnectees from './SerruresConnectees';
 import CamerasConnectees from './CamerasConnectees';
 
-function Header() {
-  return (
-    <div className="flex flex-row">
-      <img src="../src/images/logoHomeConnect.png" className="w-20 h-30" alt="logo HomeConnect" />
-    </div>
-  );
-}
-
 function Navigation() {
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void => {
-    event.preventDefault();
-  };
-  
   return (
     <div className="flex flex-row">
-      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/" onClick={handleClick} role="button"> Accueil</a>
-      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/ampoules" onClick={handleClick} role="button"> Ampoules connectées</a>
-      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/prises" onClick={handleClick} role="button"> Prises connectées</a>
-      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/serrures" onClick={handleClick} role="button"> Serrures connectées</a>
-      <a className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500" href="/cameras" onClick={handleClick} role="button"> Caméras connectées</a>
+      <Link to="/" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Accueil</Link>
+      <Link to="/ampoules" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Ampoules connectées</Link>
+      <Link to="/prises" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Prises connectées</Link>
+      <Link to="/serrures" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Serrures connectées</Link>
+      <Link to="/cameras" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Caméras connectées</Link>
     </div>
-  );
-}
-
-function Search() {
-  return (
-    <input type="text" placeholder="Rechercher..." name="search" />
   );
 }
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
-        <Header />
         <Navigation />
-        <Search />
         <Routes>
+          <Route path="/" element={<h1>Accueil</h1>} />
           <Route path="/ampoules" element={<AmpoulesConnectees />} />
           <Route path="/prises" element={<PrisesConnectees />} />
           <Route path="/serrures" element={<SerruresConnectees />} />
           <Route path="/cameras" element={<CamerasConnectees />} />
-
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

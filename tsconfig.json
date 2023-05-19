@@ -2,8 +2,12 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "jsx": "react",
+    "lib": ["dom", "es6"],
+    "jsx": "react-jsx",
     "strict": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["react", "react-dom"]
+  },
+  "include": ["src"]
 }
