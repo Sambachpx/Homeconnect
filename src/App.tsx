@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import AmpoulesConnectees from './AmpoulesConnectees';
 import PrisesConnectees from './PrisesConnectees';
@@ -12,7 +13,14 @@ function Navigation() {
       <Link to="/prises" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Prises connectées</Link>
       <Link to="/serrures" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Serrures connectées</Link>
       <Link to="/cameras" className="mt-2 px-2 py-2 text-grey font-bold rounded-md hover:text-orange-500">Caméras connectées</Link>
+      <Search />
     </div>
+  );
+}
+
+function Search() {
+  return (
+    <input type="text" placeholder="Rechercher..." name="search" />
   );
 }
 
