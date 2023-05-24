@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Accueil</title>
       </Head>
-      <h1>Accueil</h1>
+      <h1 className="text-red-500">Accueil</h1>
       {/* pour les autres pages */}
     </>
   );
