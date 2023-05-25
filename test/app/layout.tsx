@@ -5,13 +5,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header className="flex flex-col items-center justify-between px-4 py-2 bg-steel-gray">
-        <form className="mb-4">
-          <input
-            type="text"
-            placeholder="Rechercher..."
-            className="border border-gray-400 px-2 py-1 rounded-full"
-          />
-        </form>
+        <div className="flex items-center justify-between w-full mb-4">
+          <form className="flex-grow mr-4">
+            <input
+              type="text"
+              placeholder="Rechercher..."
+              className="border border-gray-400 px-2 py-1 rounded-full"
+            />
+          </form>
+          <div className="space-x-2">
+            <button className="bg-white text-steel-gray hover:bg-opacity-25 hover:bg-white rounded-full px-4 py-2">
+              Connexion
+            </button>
+            <button className="bg-white text-steel-gray hover:bg-opacity-25 hover:bg-white rounded-full px-4 py-2">
+              Inscription
+            </button>
+          </div>
+        </div>
         <ul className="flex space-x-4">
           <li>
             <Link href="/">
