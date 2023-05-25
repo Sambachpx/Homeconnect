@@ -4,7 +4,7 @@ import "./globals.css";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header className="flex flex-col items-center justify-between px-4 py-2 bg-gray-200">
+      <header className="flex flex-col items-center justify-between px-4 py-2 bg-steel-gray">
         <form className="mb-4">
           <input
             type="text"
@@ -15,33 +15,35 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ul className="flex space-x-4">
           <li>
             <Link href="/">
-              <div className="hover:text-blue-500 cursor-pointer">Accueil</div>
+              <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
+                Accueil
+              </div>
             </Link>
           </li>
           <li>
             <Link href="/ampoule">
-              <div className="hover:text-blue-500 cursor-pointer">
+              <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 Ampoules connectées
               </div>
             </Link>
           </li>
           <li>
             <Link href="/prise">
-              <div className="hover:text-blue-500 cursor-pointer">
+              <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 Prises Connectées
               </div>
             </Link>
           </li>
           <li>
             <Link href="/serrure">
-              <div className="hover:text-blue-500 cursor-pointer">
+              <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 Serrures Connectées
               </div>
             </Link>
           </li>
           <li>
             <Link href="/camera">
-              <div className="hover:text-blue-500 cursor-pointer">
+              <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 Caméras Connectées
               </div>
             </Link>
