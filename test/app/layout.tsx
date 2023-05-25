@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <input
               type="text"
               placeholder="Rechercher..."
-              className="border border-gray-400 px-2 py-1 rounded-full"
+              className="border border-gray-400 px-2 py-1 rounded-full focus:border-black"
             />
           </form>
           <div className="space-x-2">
