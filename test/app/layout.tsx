@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Link>
           </li>
           <li>
-            <Link href="/ampoule">
+            <Link href="/Ampoules">
               <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 Ampoules connectées
               </div>
