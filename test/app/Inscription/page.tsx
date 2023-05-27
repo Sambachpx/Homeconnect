@@ -9,7 +9,6 @@ export default function Inscription() {
 
   const CliquerInscrire = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     try {
       const { client, db } = await connectToDatabase();
 
@@ -32,7 +31,7 @@ export default function Inscription() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-steel-gray p-4">
+    <div className="flex flex-col items-center justify-center h-screen bg-gun-powder-700 p-4">
       <div className="bg-white rounded-lg shadow p-8 w-96">
         <h2 className="text-2xl font-bold mb-4 text-center">Inscription</h2>
         <form onSubmit={CliquerInscrire}>
