@@ -1,12 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
+export const metadata = {
+  title: "Accueil",
+};
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Accueil</title>
-      </Head>
       <h1 className="text-red-500">Bienvenue sur HomeConnect</h1>
       <div
         style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}
