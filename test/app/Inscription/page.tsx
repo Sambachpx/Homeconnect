@@ -8,6 +8,7 @@ export default function Inscription() {
   const [motDePasse, setMotDePasse] = useState("");
 
   const CliquerInscrire = async (e: React.FormEvent<HTMLFormElement>) => {
+    "use server";
     e.preventDefault();
     try {
       const { client, db } = await connectToDatabase();
