@@ -13,7 +13,6 @@ export default function Home() {
         Découvrez notre sélection d'appareils domotiques pour rendre votre
         maison intelligente et connectée.
       </p>
-      {/* Autres contenus */}
     </>
   );
 }

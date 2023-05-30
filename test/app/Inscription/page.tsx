@@ -1,41 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import { connectToDatabase } from "../../config/mongodb";
+import { CliquerInscrire } from "./serverComponent";
 
 export default function Inscription() {
   const [nom, setNom] = useState("");
   const [email, setEmail] = useState("");
   const [motDePasse, setMotDePasse] = useState("");
 
-  const CliquerInscrire = async (e: React.FormEvent<HTMLFormElement>) => {
-    "use server";
+  const handleCliquerInscrire = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const { client, db } = await connectToDatabase();
-
-      const usersCollection = db.collection("users");
-
-      await usersCollection.insertOne({
-        nom,
-        email,
-        motDePasse,
-      });
-
-      client.close();
-
-      setNom("");
-      setEmail("");
-      setMotDePasse("");
-    } catch (error) {
-      console.log("Une erreur s'est produite lors de l'inscription :", error);
-    }
+    console.log("Soumission du formulaire d'inscription");
+    await CliquerInscrire(
+      nom,
+      email,
+      motDePasse,
+      setNom,
+      setEmail,
+      setMotDePasse
+    );
   };
-
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gun-powder-700 p-4">
       <div className="bg-white rounded-lg shadow p-8 w-96">
         <h2 className="text-2xl font-bold mb-4 text-center">Inscription</h2>
-        <form onSubmit={CliquerInscrire}>
+        <form onSubmit={handleCliquerInscrire}>
           <div className="mb-4">
             <label className="block mb-2">Nom:</label>
             <input
