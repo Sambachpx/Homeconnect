@@ -5,32 +5,33 @@ import { CliquerInscrire } from "./serverComponent";
 export default function Inscription() {
   const [nom, setNom] = useState("");
   const [email, setEmail] = useState("");
-  const [motDePasse, setMotDePasse] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleCliquerInscrire = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Soumission du formulaire d'inscription");
-    await CliquerInscrire(
-      nom,
-      email,
-      motDePasse,
-      setNom,
-      setEmail,
-      setMotDePasse
-    );
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      await CliquerInscrire(nom, email, password);
+      // redirection a faire
+      setNom("");
+      setEmail("");
+      setPassword("");
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gun-powder-700 p-4">
       <div className="bg-white rounded-lg shadow p-8 w-96">
         <h2 className="text-2xl font-bold mb-4 text-center">Inscription</h2>
-        <form onSubmit={handleCliquerInscrire}>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block mb-2">Nom:</label>
             <input
               type="text"
               className="w-full border-gray-300 border rounded py-2 px-3"
               value={nom}
-              onChange={(e) => setNom(e.target.value)}
+              onChange={(event) => setNom(event.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -39,7 +40,7 @@ export default function Inscription() {
               type="email"
               className="w-full border-gray-300 border rounded py-2 px-3"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -47,8 +48,8 @@ export default function Inscription() {
             <input
               type="password"
               className="w-full border-gray-300 border rounded py-2 px-3"
-              value={motDePasse}
-              onChange={(e) => setMotDePasse(e.target.value)}
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
           </div>
           <button

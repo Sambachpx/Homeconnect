@@ -1,16 +1,18 @@
 import { MongoClient, Db } from "mongodb";
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const uri =
+  process.env.MONGODB_URI ||
+  "mongodb+srv://sambachamproux:q0HgSgDICQaun62f@cluster0.ustmmhl.mongodb.net/?retryWrites=true&w=majority";
 
 export async function connectToDatabase(): Promise<{
   client: MongoClient;
   db: Db;
 }> {
-  if (!MONGODB_URI) {
-    throw new Error("Ajouter l'URI Mongo à .env.local");
+  if (!uri) {
+    throw new Error("ajouter l'URI mongo à .env.local");
   }
 
-  const client = new MongoClient(MONGODB_URI);
+  const client = new MongoClient(uri);
   await client.connect();
 
   const db = client.db();
