@@ -15,6 +15,8 @@ export const CliquerInscrire = async (
       nom,
       email,
       motDePasse,
+      nombreAchats: 0,
+      sommeDepensee: 0,
     });
 
     client.close();
