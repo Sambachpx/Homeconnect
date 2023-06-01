@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { CliquerInscrire } from "./serverComponent";
+import { useRouter } from "next/router";
 
 export default function Inscription() {
   const [nom, setNom] = useState("");

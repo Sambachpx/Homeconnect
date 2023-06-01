@@ -1,7 +1,6 @@
 import { MongoClient, Db } from "mongodb";
 
 const uri =
-  process.env.MONGODB_URI ||
   "mongodb+srv://sambachamproux:q0HgSgDICQaun62f@cluster0.ustmmhl.mongodb.net/?retryWrites=true&w=majority";
 
 export async function connectToDatabase(): Promise<{

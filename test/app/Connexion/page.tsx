@@ -1,17 +1,36 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { CliquerConnexion } from "./serverComponent";
+import router, { useRouter } from "next/router";
 
 export default function Connexion() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      await CliquerConnexion(email, password);
+      router.push("/");
+      setEmail("");
+      setPassword("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gun-powder-700 p-4">
       <div className="bg-white rounded-lg shadow p-8 w-96">
         <h2 className="text-2xl font-bold mb-4 text-center">Connexion</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block mb-2">Email:</label>
             <input
               type="email"
               className="w-full border-gray-300 border rounded py-2 px-3"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -19,6 +38,8 @@ export default function Connexion() {
             <input
               type="password"
               className="w-full border-gray-300 border rounded py-2 px-3"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
           </div>
           <button
