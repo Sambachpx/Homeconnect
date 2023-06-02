@@ -1,19 +1,20 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { CliquerConnexion } from "./serverComponent";
-import router, { useRouter } from "next/router";
 
 export default function Connexion() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [adminLogger, setIsAdminLoggedIn] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       await CliquerConnexion(email, password);
-      router.push("/");
       setEmail("");
       setPassword("");
+      setIsAdminLoggedIn(email === "admin@admin" && password === "admin");
     } catch (error) {
       console.error(error);
     }
@@ -49,6 +50,15 @@ export default function Connexion() {
             Se connecter
           </button>
         </form>
+        {adminLogger && (
+          <div className="text-center mt-4">
+            <Link href="/Admin">
+              <div className="text-blue-500 underline cursor-pointer">
+                Accéder à l'espace administrateur
+              </div>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
