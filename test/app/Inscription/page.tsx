@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { CliquerInscrire } from "./serverComponent";
-import { useRouter } from "next/router";
 
 export default function Inscription() {
   const [nom, setNom] = useState("");
@@ -12,7 +11,6 @@ export default function Inscription() {
     event.preventDefault();
     try {
       await CliquerInscrire(nom, email, password);
-      // redirection a faire
       setNom("");
       setEmail("");
       setPassword("");
