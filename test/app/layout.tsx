@@ -21,6 +21,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="bg-white text-steel-gray hover:bg-opacity-25 hover:bg-white rounded-full px-4 py-2 cursor-pointer">
                 <Link href="/Inscription">Inscription</Link>
               </div>
+              <div className="bg-white text-steel-gray hover:bg-opacity-25 hover:bg-white rounded-full px-4 py-2 cursor-pointer">
+                <Link href="/Panier">Panier</Link>
+              </div>
             </div>
           </div>
           <ul className="flex space-x-4">
