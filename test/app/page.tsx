@@ -1,7 +1,9 @@
+import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
+
 export const metadata = {
   title: "Accueil",
 };
-
 export default function Home() {
   return (
     <>
@@ -77,6 +79,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Analytics />
     </>
   );
 }
