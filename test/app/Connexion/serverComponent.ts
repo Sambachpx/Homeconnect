@@ -15,7 +15,6 @@ export const CliquerConnexion = async (email: string, motDePasse: string) => {
       console.log("Connexion réussie");
       console.log("Nom d'utilisateur :", user.nom);
       console.log("Mot de passe :", user.motDePasse);
-      // redirection a faire
     } else {
       console.log("Email ou mot de passe invalide");
     }
