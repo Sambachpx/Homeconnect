@@ -17,7 +17,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="bg-white p-4">
             <img
-              src="a remplacer"
+              src="/test/public/ampoule1.jpeg"
               alt="Ampoule Connectée"
               className="w-full h-48 object-cover mb-4"
             />
