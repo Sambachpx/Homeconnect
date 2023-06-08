@@ -16,7 +16,7 @@ export default function Serrure() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="bg-white p-4">
             <img
-              src="a remplacer"
+              src="/test/public/ampoule1.jpeg"
               alt="Serrure Connectée"
               className="w-full h-48 object-cover mb-4"
             />
@@ -28,7 +28,7 @@ export default function Serrure() {
             <div className="flex justify-between items-center">
               <span className="text-lg">149,99 €</span>
               <a
-                href="a remplacer"
+                href="/test/public/ampoule1.jpeg"
                 className="bg-green-500 text-white px-4 py-2"
               >
                 Ajouter au panier
@@ -38,7 +38,7 @@ export default function Serrure() {
 
           <div className="bg-white p-4">
             <img
-              src="a remplacer"
+              src="/test/public/ampoule1.jpeg"
               alt="Serrure Connectée 2"
               className="w-full h-48 object-cover mb-4"
             />
@@ -49,7 +49,7 @@ export default function Serrure() {
             <div className="flex justify-between items-center">
               <span className="text-lg">169,99 €</span>
               <a
-                href="a remplacer"
+                href="/test/public/ampoule1.jpeg"
                 className="bg-green-500 text-white px-4 py-2"
               >
                 Ajouter au panier
@@ -59,7 +59,7 @@ export default function Serrure() {
 
           <div className="bg-white p-4">
             <img
-              src="a remplacer"
+              src="/test/public/ampoule1.jpeg"
               alt="Serrure Connectée 3"
               className="w-full h-48 object-cover mb-4"
             />
@@ -70,7 +70,7 @@ export default function Serrure() {
             <div className="flex justify-between items-center">
               <span className="text-lg">199,99 €</span>
               <a
-                href="a remplacer"
+                href="/test/public/ampoule1.jpeg"
                 className="bg-green-500 text-white px-4 py-2"
               >
                 Ajouter au panier
