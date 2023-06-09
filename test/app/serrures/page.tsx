@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const metadata = {
   title: "Serrures Connectées",
 };
@@ -15,10 +16,11 @@ export default function Serrure() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Serrure Connectée"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/serrure1.jpeg"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Serrure Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -37,10 +39,11 @@ export default function Serrure() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Serrure Connectée 2"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/serrure2.jpeg"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Serrure Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -58,10 +61,11 @@ export default function Serrure() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Serrure Connectée 3"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/serrure3.jpeg"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Serrure Connectée 3</h3>
             <p className="text-gray-500 mb-4">

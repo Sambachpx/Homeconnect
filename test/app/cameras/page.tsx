@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const metadata = {
   title: "Caméras Connectées",
 };
@@ -15,10 +16,11 @@ export default function Camera() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Caméra Connectée"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/camera1.webp"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Caméra Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -36,10 +38,11 @@ export default function Camera() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Caméra Connectée 2"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/camera2.jpeg"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Caméra Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -57,10 +60,11 @@ export default function Camera() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Caméra Connectée 3"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/camera3.jpeg"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Caméra Connectée 3</h3>
             <p className="text-gray-500 mb-4">

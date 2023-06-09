@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const metadata = {
   title: "Prises Connectées",
 };
@@ -16,10 +17,11 @@ export default function Prise() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Prise Connectée"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/prise1.jpeg"}
+              height={0}
+              width={200}
+              alt="image prise1"
             />
             <h3 className="text-xl mb-2">Prise Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -37,10 +39,11 @@ export default function Prise() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Prise Connectée 2"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/prise2.jpeg"}
+              height={0}
+              width={200}
+              alt="image prise1"
             />
             <h3 className="text-xl mb-2">Prise Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -58,10 +61,11 @@ export default function Prise() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Prise Connectée 3"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/prise3.jpeg"}
+              height={0}
+              width={200}
+              alt="image prise1"
             />
             <h3 className="text-xl mb-2">Prise Connectée 3</h3>
             <p className="text-gray-500 mb-4">
