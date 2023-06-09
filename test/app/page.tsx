@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import Image from "next/image";
 
 export const metadata = {
   title: "Accueil",
@@ -16,10 +17,11 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Ampoule Connectée"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/ampoule1.jpeg"}
+              height={0}
+              width={200}
+              alt="image ampoule1"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -36,10 +38,11 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Prise Connectée"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/prise1.jpeg"}
+              height={0}
+              width={200}
+              alt="image prise1"
             />
             <h3 className="text-xl mb-2">Prise Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -57,10 +60,11 @@ export default function Home() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Caméra de Sécurité"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/camera1.webp"}
+              height={0}
+              width={200}
+              alt="image camera1"
             />
             <h3 className="text-xl mb-2">Caméra de Sécurité</h3>
             <p className="text-gray-500 mb-4">
