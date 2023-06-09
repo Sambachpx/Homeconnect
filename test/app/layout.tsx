@@ -6,12 +6,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html>
       <body className="flex flex-col min-h-screen">
         <header className="flex flex-col items-center justify-between px-4 py-2 bg-steel-gray">
-          <div className="flex items-center justify-between w-full mb-4">
+          <div className="flex items-center justify-between w-full mb-4 sm:mb-0">
             <form className="flex-grow flex justify-center mr-4">
               <input
                 type="text"
                 placeholder="Rechercher..."
-                className="border border-gray-400 px-2 py-1 rounded-full"
+                className="border border-gray-400 px-2 py-1 rounded-full w-full sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2"
               />
             </form>
             <div className="flex space-x-2">
@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
           </div>
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-4 sm:space-x-2">
             <li>
               <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 <Link href="/">Accueil</Link>
