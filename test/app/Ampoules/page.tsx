@@ -20,7 +20,7 @@ export default function Ampoule() {
               src={"/ampoule1.jpeg"}
               height={0}
               width={200}
-              alt="image dampoules"
+              alt="image ampoule1"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -39,10 +39,10 @@ export default function Ampoule() {
 
           <div className="bg-white p-4">
             <Image
-              src={"/ampoule1.jpeg"}
+              src={"/ampoule2.jpeg"}
               height={0}
               width={200}
-              alt="image dampoules"
+              alt="image ampoule2"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -60,10 +60,11 @@ export default function Ampoule() {
           </div>
 
           <div className="bg-white p-4">
-            <img
-              src="/test/public/ampoule1.jpeg"
-              alt="Ampoule Connectée 3"
-              className="w-full h-48 object-cover mb-4"
+            <Image
+              src={"/ampoule3.webp"}
+              height={0}
+              width={200}
+              alt="image ampoule3"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée 3</h3>
             <p className="text-gray-500 mb-4">
