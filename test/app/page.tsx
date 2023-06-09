@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 
 export const metadata = {
@@ -82,7 +81,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Analytics />
     </>
   );
 }
