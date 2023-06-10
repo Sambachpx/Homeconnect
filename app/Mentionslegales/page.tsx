@@ -1,3 +1,3 @@
 export default function Mentionslegales() {
-    return <h1>page de Mentions légales</h1>;
-  }
+  return <h1>page de Mentions légales</h1>;
+}
