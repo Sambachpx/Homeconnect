@@ -21,6 +21,7 @@ export default function Home() {
               height={0}
               width={200}
               alt="image ampoule1"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -42,6 +43,7 @@ export default function Home() {
               height={0}
               width={200}
               alt="image prise1"
+              style={{ width: "auto" }}
             />
             <h3 className="text-xl mb-2">Prise Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -64,6 +66,8 @@ export default function Home() {
               height={0}
               width={200}
               alt="image camera1"
+              className="w-full h-auto"
+              priority={true}
             />
             <h3 className="text-xl mb-2">Caméra de Sécurité</h3>
             <p className="text-gray-500 mb-4">
