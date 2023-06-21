@@ -44,11 +44,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </li>
             <li>
               <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
-                <Link href="/Serrures">Serrures Connectées</Link>
-              </div>
-            </li>
-            <li>
-              <div className="text-white font-bold cursor-pointer hover:bg-opacity-25 hover:bg-white hover:rounded">
                 <Link href="/Cameras">Caméras Connectées</Link>
               </div>
             </li>
