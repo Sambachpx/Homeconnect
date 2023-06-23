@@ -21,6 +21,7 @@ export default function Ampoule() {
               height={0}
               width={200}
               alt="image ampoule1"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -43,6 +44,7 @@ export default function Ampoule() {
               height={0}
               width={200}
               alt="image ampoule2"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -65,6 +67,7 @@ export default function Ampoule() {
               height={0}
               width={200}
               alt="image ampoule3"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Ampoule Connectée 3</h3>
             <p className="text-gray-500 mb-4">

@@ -21,7 +21,8 @@ export default function Prise() {
               src={"/prise1.jpeg"}
               height={0}
               width={200}
-              alt="image prise1"
+              alt="image prise 1"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Prise Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -43,7 +44,8 @@ export default function Prise() {
               src={"/prise2.jpeg"}
               height={0}
               width={200}
-              alt="image prise1"
+              alt="image prise 2"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Prise Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -65,7 +67,8 @@ export default function Prise() {
               src={"/prise3.jpeg"}
               height={0}
               width={200}
-              alt="image prise1"
+              alt="image prise 3"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Prise Connectée 3</h3>
             <p className="text-gray-500 mb-4">

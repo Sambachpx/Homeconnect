@@ -21,6 +21,7 @@ export default function Camera() {
               height={0}
               width={200}
               alt="image camera1"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Caméra Connectée</h3>
             <p className="text-gray-500 mb-4">
@@ -42,7 +43,8 @@ export default function Camera() {
               src={"/camera2.jpeg"}
               height={0}
               width={200}
-              alt="image camera1"
+              alt="image camera 2"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Caméra Connectée 2</h3>
             <p className="text-gray-500 mb-4">
@@ -64,7 +66,8 @@ export default function Camera() {
               src={"/camera3.jpeg"}
               height={0}
               width={200}
-              alt="image camera1"
+              alt="image camera 3"
+              className="w-full h-auto"
             />
             <h3 className="text-xl mb-2">Caméra Connectée 3</h3>
             <p className="text-gray-500 mb-4">
