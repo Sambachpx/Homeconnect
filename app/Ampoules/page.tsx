@@ -45,6 +45,7 @@ export default function Ampoule() {
               width={200}
               alt="image ampoule2"
               className="w-full h-auto"
+              priority={true}
             />
             <h3 className="text-xl mb-2">Ampoule Connectée 2</h3>
             <p className="text-gray-500 mb-4">
