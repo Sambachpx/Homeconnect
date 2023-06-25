@@ -1,5 +1,6 @@
 "use server";
 import { connectToDatabase } from "../../config/mongodb";
+
 export const RecupInfoUser = async () => {
   try {
     const { client, db } = await connectToDatabase();
@@ -10,11 +11,27 @@ export const RecupInfoUser = async () => {
 
     client.close();
 
-    console.log("recup des informations des utilisateurs réussie");
+    console.log("Récupération des informations des utilisateurs réussie");
     return users;
   } catch (error) {
     console.log(
-      "une erreur c produite pour la recup des informations des utilisateurs :",
+      "Une erreur s'est produite lors de la récupération des informations des utilisateurs:",
+      error
+    );
+  }
+};
+
+export const AjouterProduit = async (produit: any) => {
+  try {
+    const { client, db } = await connectToDatabase();
+    const productsCollection = db.collection("Products");
+    await productsCollection.insertOne(produit);
+    client.close();
+
+    console.log("ajout du produit réussi");
+  } catch (error) {
+    console.log(
+      "une erreur s'est produite lors de l'ajout du produit :",
       error
     );
   }
