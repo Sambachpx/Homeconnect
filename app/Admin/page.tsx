@@ -16,7 +16,6 @@ export default function Admin() {
   const [categorie, setCategorie] = useState("");
   const [prix, setPrix] = useState(0);
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
   const [caracteristiques, setCaracteristiques] = useState("");
 
   useEffect(() => {
@@ -34,7 +33,6 @@ export default function Admin() {
       categorie,
       prix,
       description,
-      image,
       caracteristiques: caracteristiques.split(","),
     };
 
@@ -43,7 +41,6 @@ export default function Admin() {
     setCategorie("");
     setPrix(0);
     setDescription("");
-    setImage("");
     setCaracteristiques("");
   };
 
@@ -102,14 +99,6 @@ export default function Admin() {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
-          <br />
-          <label>Image:</label>
-          <input
-            type="text"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-          />
-          <br />
           <label>Caractéristiques:</label>
           <input
             type="text"

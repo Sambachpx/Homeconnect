@@ -11,11 +11,11 @@ export const RecupInfoUser = async () => {
 
     client.close();
 
-    console.log("Récupération des informations des utilisateurs réussie");
+    console.log("récupération des informations des utilisateurs réussie");
     return users;
   } catch (error) {
     console.log(
-      "Une erreur s'est produite lors de la récupération des informations des utilisateurs:",
+      "une erreur s'est produite lors de la récupération des informations des utilisateurs:",
       error
     );
   }
