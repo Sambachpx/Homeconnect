@@ -71,7 +71,7 @@ export default function Admin() {
       </div>
 
       <div className="w-1/2">
-        <h2>Ajouter un produit</h2>
+        <h2>Ajouter un produit :</h2>
         <form>
           <label>Nom:</label>
           <input
