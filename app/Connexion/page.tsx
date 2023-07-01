@@ -21,12 +21,14 @@ export default function Connexion() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gun-powder-700 p-4">
-      <div className="bg-white rounded-lg shadow p-8 w-96">
-        <h2 className="text-2xl font-bold mb-4 text-center">Connexion</h2>
+    <div className="flex flex-col items-center justify-center h-screen bg-steel-gray p-4">
+      <div className="bg-purple-800 rounded-lg shadow p-8 w-96">
+        <h2 className="text-2xl font-bold mb-4 text-center text-white">
+          Connexion
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block mb-2">Email:</label>
+            <label className="block mb-2 text-white">Email:</label>
             <input
               type="email"
               className="w-full border-gray-300 border rounded py-2 px-3"
@@ -35,7 +37,7 @@ export default function Connexion() {
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-2">Mot de passe:</label>
+            <label className="block mb-2 text-white">Mot de passe:</label>
             <input
               type="password"
               className="w-full border-gray-300 border rounded py-2 px-3"
@@ -45,7 +47,7 @@ export default function Connexion() {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-steel-gray hover:bg-opacity-25 hover:bg-white text-white font-bold py-2 px-4 rounded"
           >
             Se connecter
           </button>
@@ -53,7 +55,7 @@ export default function Connexion() {
         {adminLogger && (
           <div className="text-center mt-4">
             <Link href="/Admin">
-              <div className="text-blue-500 underline cursor-pointer">
+              <div className="text-white underline cursor-pointer">
                 Accéder à lespace administrateur
               </div>
             </Link>
